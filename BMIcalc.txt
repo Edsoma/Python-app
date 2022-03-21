@@ -1,0 +1,24 @@
+name = input("What is your name? ")
+birth_year = input("What is your birth year? ")
+age = 2022 - int(birth_year)
+print("Hello " + name)
+print("You are", age, "years old")
+weight = input("What is your weight "+name+"? ")
+weight_metrics = input("In (p)oounds or in (k)ilograms? ")
+while weight_metrics != "p" and weight_metrics != "k":
+    weight_metrics = input("Please, inform p (pounds) or k (kilograms))")
+if weight_metrics == "p":
+    weight = float(weight) * 0.4536
+height = input("What is your height "+name+"? ")
+height_metrics = input("In (f)eet or in (m)eters ")
+while height_metrics != "f" and height_metrics != "m":
+    height_metrics = input("Please, inform f (feet) or m (meters) ")
+if height_metrics == "f":
+    height = float(height) * 0.3048
+BMI = float(weight) / (float(height) ** 2)
+if BMI >= 25:
+    print("Take care, your BMI is",BMI,". You are overweight")
+elif BMI < 25:
+    print("Your BMI is",BMI,"which is a healthy level for most of people from 18 to 65 years old")
+print("Hope you liked this app")
+#Developed by E. Maciel... just for fun!!
